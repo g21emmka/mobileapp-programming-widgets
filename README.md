@@ -3,35 +3,37 @@
 
 **Skriv din rapport här!**
 
-_Du kan ta bort all text som finns sedan tidigare_.
+Jag har ändrat layouten i appen. Detta genom att lägga till en ConstraintLayout. 
+I denna så har jag även lagt till en Button, EditText och en ImageView. 
+Detta är gjort i filen activity_main. 
+Därefter så har jag stylat dessa genom att lägga till färg på ImageView och på knappen som jag lagt till. 
+Jag har även gett alla widgets id:n och lagt in höjd, bredd och margin för att positionera ut dem.
+Sedan ändrade jag även appens namn i filen strings.xml under app_name. 
 
-## Följande grundsyn gäller dugga-svar:
 
-- Ett kortfattat svar är att föredra. Svar som är längre än en sida text (skärmdumpar och programkod exkluderat) är onödigt långt.
-- Svaret skall ha minst en snutt programkod.
-- Svaret skall inkludera en kort övergripande förklarande text som redogör för vad respektive snutt programkod gör eller som svarar på annan teorifråga.
-- Svaret skall ha minst en skärmdump. Skärmdumpar skall illustrera exekvering av relevant programkod. Eventuell text i skärmdumpar måste vara läsbar.
-- I de fall detta efterfrågas, dela upp delar av ditt svar i för- och nackdelar. Dina för- respektive nackdelar skall vara i form av punktlistor med kortare stycken (3-4 meningar).
-
-Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
-
+Programkod för ImageView
 ```
-function errorCallback(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            // Geolocation API stöds inte, gör något
-            break;
-        case error.POSITION_UNAVAILABLE:
-            // Misslyckat positionsanrop, gör något
-            break;
-        case error.UNKNOWN_ERROR:
-            // Okänt fel, gör något
-            break;
-    }
-}
+ <ImageView
+        android:id="@+id/signin_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@color/colorPrimary" />
 ```
-
-Bilder läggs i samma mapp som markdown-filen.
+Programkod för Button 
+```
+   <Button
+        android:id="@+id/signin_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintStart_toEndOf="@+id/password"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="Sign in" />
+```
 
 ![](android.png)
 
